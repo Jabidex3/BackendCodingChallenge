@@ -13,18 +13,23 @@ public class Dependent {
 	
 	private String name;
 	private String birthDate;
-	//add in userId to simplify thingss
+	private int userId;
 	
 	public Dependent() {
 		super();
 	}
 
-	public Dependent(int dependentId, String name, String birthDate) {
+	
+
+	public Dependent(int dependentId, String name, String birthDate, int userId) {
 		super();
 		this.dependentId = dependentId;
 		this.name = name;
 		this.birthDate = birthDate;
+		this.userId = userId;
 	}
+
+
 
 	public int getDependentId() {
 		return dependentId;
@@ -50,11 +55,21 @@ public class Dependent {
 		this.birthDate = birthDate;
 	}
 
+	public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
+
 	@Override
 	public String toString() {
-		return "Dependent [dependentId=" + dependentId + ", name=" + name + ", birthDate=" + birthDate + "]";
+		return "Dependent [dependentId=" + dependentId + ", name=" + name + ", birthDate=" + birthDate + ", userId="
+				+ userId + "]";
 	}
-	
+
+
 }
 
 
