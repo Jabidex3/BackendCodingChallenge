@@ -10,5 +10,6 @@ import com.codingchallenge.application.model.Dependent;
 public interface DependentService {
 	public void addDependent(Dependent d);
 	public List<Dependent> findAll();
-	public List<Integer> findAllByUser(int userId);
+	public List<Dependent> findAllByUser(int userId);
+	public void delete(int dependentId);
 }
