@@ -13,22 +13,20 @@ public class Dependent {
 	
 	private String name;
 	private String birthDate;
-	private int userId;
+	private int enrolleeId; //refers to provider's id
 	
 	public Dependent() {
 		super();
 	}
 
-	
 
-	public Dependent(int dependentId, String name, String birthDate, int userId) {
+	public Dependent(int dependentId, String name, String birthDate, int enrolleeId) {
 		super();
 		this.dependentId = dependentId;
 		this.name = name;
 		this.birthDate = birthDate;
-		this.userId = userId;
+		this.enrolleeId = enrolleeId;
 	}
-
 
 
 	public int getDependentId() {
@@ -55,19 +53,23 @@ public class Dependent {
 		this.birthDate = birthDate;
 	}
 
-	public int getUserId() {
-		return userId;
+
+	public int getEnrolleeId() {
+		return enrolleeId;
 	}
 
-	public void setUserId(int userId) {
-		this.userId = userId;
+
+	public void setEnrolleeId(int enrolleeId) {
+		this.enrolleeId = enrolleeId;
 	}
+
 
 	@Override
 	public String toString() {
-		return "Dependent [dependentId=" + dependentId + ", name=" + name + ", birthDate=" + birthDate + ", userId="
-				+ userId + "]";
+		return "Dependent [dependentId=" + dependentId + ", name=" + name + ", birthDate=" + birthDate + ", enrolleeId="
+				+ enrolleeId + "]";
 	}
+
 
 
 }

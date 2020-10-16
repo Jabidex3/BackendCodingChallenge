@@ -8,11 +8,11 @@ import javax.persistence.Id;
 import com.sun.istack.NotNull;
 
 @Entity
-public class User {
+public class Enrollee {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int userId;
+	private int enrolleeId;
 	
 	@NotNull
 	private String name;
@@ -23,35 +23,33 @@ public class User {
 	
 	private String phoneNumber;
 
-	public User() {
+	public Enrollee() {
 		super();
 	}
 
-	public User(String name, boolean activationStatus, String birthDate, String phoneNumber) {
+	public Enrollee(String name, boolean activationStatus, String birthDate, String phoneNumber) {
 		super();
 		this.name = name;
 		this.activationStatus = activationStatus;
 		this.birthDate = birthDate;
 		this.phoneNumber = phoneNumber;
 	}
-	
-	
 
-	public User(int userId, String name, boolean activationStatus, String birthDate, String phoneNumber) {
+	public Enrollee(int enrolleeId, String name, boolean activationStatus, String birthDate, String phoneNumber) {
 		super();
-		this.userId = userId;
+		this.enrolleeId = enrolleeId;
 		this.name = name;
 		this.activationStatus = activationStatus;
 		this.birthDate = birthDate;
 		this.phoneNumber = phoneNumber;
 	}
 
-	public int getUserId() {
-		return userId;
+	public int getEnrolleeId() {
+		return enrolleeId;
 	}
 
-	public void setUserId(int userId) {
-		this.userId = userId;
+	public void setEnrolleeId(int enrolleeId) {
+		this.enrolleeId = enrolleeId;
 	}
 
 	public String getName() {
@@ -88,9 +86,11 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "User [userId=" + userId + ", name=" + name + ", activationStatus=" + activationStatus + ", birthDate="
-				+ birthDate + ", phoneNumber=" + phoneNumber + "]";
+		return "Enrollee [enrolleeId=" + enrolleeId + ", name=" + name + ", activationStatus=" + activationStatus
+				+ ", birthDate=" + birthDate + ", phoneNumber=" + phoneNumber + "]";
 	}
+
+
 	
 }
 

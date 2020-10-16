@@ -26,16 +26,16 @@ public class DependentServiceImplementation implements DependentService{
 	}
 
 	@Override
-	public List<Dependent> findAllByUser(int userId) {
+	public List<Dependent> findAllByEnrollee(int enrolleeId) {
 		List<Dependent> allDependents = dependentRepo.findAll();
-		List<Dependent> dependentIdsOfGivenUserId = new ArrayList<Dependent>();
+		List<Dependent> dependentIdsOfGivenEnrolleeId = new ArrayList<Dependent>();
 		for(int i=0;i<allDependents.size();i++) {
-			if(allDependents.get(i).getUserId()==userId) {
-				dependentIdsOfGivenUserId.add(allDependents.get(i));
+			if(allDependents.get(i).getEnrolleeId()==enrolleeId) {
+				dependentIdsOfGivenEnrolleeId.add(allDependents.get(i));
 			}
 		}
 		
-		return dependentIdsOfGivenUserId;
+		return dependentIdsOfGivenEnrolleeId;
 	}
 
 	@Override
