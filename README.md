@@ -17,7 +17,7 @@ The application we will be building will need to be able to do these things:
 - Remove dependents from an enrollee
 - Modify existing dependents
 <br>
-====================================================================================
+========================================================
 <br>
 
 ### Getting Started:
@@ -31,3 +31,9 @@ This application was created using Eclipse IDE for Java EE Developers and MySql 
   create database codingchallengedb;
   ```
 - Run CenteneCodingChallengeApplication.java as a Spring boot App or Java Application
+<br>
+========================================================
+<br>
+
+### REST API Documentation:
+https://documenter.getpostman.com/view/13128470/TVRrVQaK
